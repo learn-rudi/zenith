@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What This Looks Like — Zenith Wealth Partners</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --ink: #1A1D23;
+    --ink-light: #4B5563;
+    --mid: #6B7280;
+    --caption: #9CA3AF;
+    --rule: #D0D3D9;
+    --border: #E5E7EB;
+    --surface: #F3F4F6;
+    --paper: #FAFBFC;
+    --white: #FFFFFF;
+    --serif: 'EB Garamond', Georgia, serif;
+    --sans: 'DM Sans', -apple-system, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 64px 48px;
+  }
+
+  .rule-top {
+    height: 4px;
+    background: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .rule-thin {
+    height: 1px;
+    background: var(--rule);
+    margin-bottom: 40px;
+  }
+
+  /* Masthead */
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+  }
+
+  .masthead-left {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--caption);
+  }
+
+  .masthead-right {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--caption);
+  }
+
+  /* Hero */
+  .hero {
+    margin-bottom: 48px;
+    padding-top: 32px;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.08;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero .deck {
+    font-family: var(--serif);
+    font-size: 24px;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--mid);
+    line-height: 1.45;
+    margin-bottom: 20px;
+    max-width: 720px;
+  }
+
+  .hero .byline {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--caption);
+  }
+
+  .hero .byline span {
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    color: var(--rule);
+    margin: 0 8px;
+  }
+
+  /* Section labels */
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--caption);
+    margin-bottom: 28px;
+  }
+
+  /* Intro */
+  .intro {
+    margin-bottom: 56px;
+    max-width: 760px;
+  }
+
+  .intro p {
+    font-size: 15px;
+    color: var(--mid);
+    line-height: 1.75;
+  }
+
+  .intro .systems {
+    font-weight: 600;
+    color: var(--ink-light);
+  }
+
+  /* Scenario cards */
+  .scenarios {
+    margin-bottom: 56px;
+  }
+
+  .scenario {
+    background: var(--white);
+    border: 1px solid var(--border);
+    margin-bottom: 2px;
+    display: grid;
+    grid-template-columns: 200px 1fr 1fr;
+  }
+
+  .scenario-label {
+    padding: 36px 28px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .scenario-label .scenario-num {
+    font-family: var(--serif);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--caption);
+    margin-bottom: 6px;
+  }
+
+  .scenario-label h3 {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+
+  .scenario-col {
+    padding: 36px 32px;
+  }
+
+  .scenario-col + .scenario-col {
+    border-left: 1px solid var(--border);
+  }
+
+  .scenario-col .col-header {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+
+  .col-today .col-header {
+    color: var(--caption);
+  }
+
+  .col-future .col-header {
+    color: var(--ink);
+  }
+
+  .scenario-col p {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .col-today p {
+    color: var(--caption);
+  }
+
+  .col-future p {
+    color: var(--ink-light);
+  }
+
+  .col-future .highlight {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* Principle callout */
+  .principle {
+    margin: 0 0 56px;
+    padding: 28px 36px;
+    border-left: 3px solid var(--ink);
+    background: var(--white);
+  }
+
+  .principle .principle-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--caption);
+    margin-bottom: 10px;
+  }
+
+  .principle p {
+    font-family: var(--serif);
+    font-size: 19px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 11px;
+    color: var(--caption);
+    letter-spacing: 0.5px;
+  }
+
+  .footer-center {
+    font-family: var(--serif);
+    font-size: 12px;
+    font-style: italic;
+    color: var(--rule);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .scenario {
+      grid-template-columns: 1fr;
+    }
+    .scenario-label {
+      border-right: none;
+      border-bottom: 1px solid var(--border);
+      padding: 24px 28px;
+    }
+    .scenario-col + .scenario-col {
+      border-left: none;
+      border-top: 1px solid var(--border);
+    }
+    .footer { flex-direction: column; gap: 8px; text-align: center; }
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 32px 20px; }
+    .hero { margin-bottom: 40px; padding-top: 24px; }
+    .hero h1 { font-size: 32px; letter-spacing: -0.3px; }
+    .hero .deck { font-size: 18px; }
+    .hero .byline { font-size: 10px; letter-spacing: 1.5px; line-height: 1.6; }
+    .hero .byline span { display: none; }
+    .scenario-label { padding: 20px; }
+    .scenario-label h3 { font-size: 20px; }
+    .scenario-col { padding: 24px 20px; }
+    .principle { padding: 24px 20px; }
+    .principle p { font-size: 17px; }
+    .section-label { font-size: 9px; margin-bottom: 20px; }
+    .intro { margin-bottom: 40px; }
+    .intro p { font-size: 14px; }
+  }
+
+  @media (max-width: 380px) {
+    .page { padding: 24px 16px; }
+    .hero h1 { font-size: 28px; }
+    .hero .deck { font-size: 16px; }
+  }
+
+  @media print {
+    body { background: white; }
+    .page { padding: 40px 32px; max-width: none; }
+    .scenario { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="rule-top"></div>
+
+  <div class="masthead">
+    <div class="masthead-left">Prepared by RUDI</div>
+    <div class="masthead-right">March 2026</div>
+  </div>
+
+  <div class="rule-thin"></div>
+
+  <div class="hero">
+    <h1>What This Looks Like</h1>
+    <p class="deck">A grounded view of AI-integrated wealth management — not science fiction, just your Monday morning made faster.</p>
+    <p class="byline">RUDI — Responsible Use of Digital Intelligence <span>|</span> Prepared for Zenith Wealth Partners</p>
+  </div>
+
+  <div class="intro">
+    <p>Nobody's workflow changes. Nobody learns to code. The data you already have — across <span class="systems">WealthBox, RightCapital, YourStake, Morningstar, Drive, Notion, Slack</span> — just starts working together. Here's what that looks like in practice.</p>
+  </div>
+
+  <div class="scenarios">
+    <div class="section-label">Workflow Transformations</div>
+
+    <div class="scenario">
+      <div class="scenario-label">
+        <div class="scenario-num">01</div>
+        <h3>Client Onboarding</h3>
+      </div>
+      <div class="scenario-col col-today">
+        <div class="col-header">Today</div>
+        <p>Prospect fills out YourStake questionnaire. Advisor manually reviews results, drafts investment policy statement language, screens the fund universe, builds a proposed portfolio, and creates a presentation for the first meeting.</p>
+      </div>
+      <div class="scenario-col col-future">
+        <div class="col-header">With AI Integration</div>
+        <p>Prospect fills out the questionnaire. <span class="highlight">Before the first meeting, an agent has drafted the IPS language, screened funds against their values, built a proposed portfolio with Morningstar quantitative scores, and generated a one-page summary.</span> Advisor reviews, edits, and walks in prepared.</p>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-label">
+        <div class="scenario-num">02</div>
+        <h3>Quarterly Reporting</h3>
+      </div>
+      <div class="scenario-col col-today">
+        <div class="col-header">Today</div>
+        <p>Andrew manually pulls Morningstar data and YourStake impact scores into Claude to build a scorecard for each portfolio. Flags funds below threshold by hand. Drafts client-facing impact reports individually.</p>
+      </div>
+      <div class="scenario-col col-future">
+        <div class="col-header">With AI Integration</div>
+        <p><span class="highlight">Agent runs quarterly — pulls both data sources, generates the scorecard, flags funds below threshold, drafts swap recommendations, and produces the client-facing impact report.</span> Andrew approves instead of builds.</p>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-label">
+        <div class="scenario-num">03</div>
+        <h3>RFP Response</h3>
+      </div>
+      <div class="scenario-col col-today">
+        <div class="col-header">Today</div>
+        <p>85-page RFP arrives. Andrew works through it with Claude, starting mostly from scratch each time — re-establishing the firm's voice, compliance language, and track record with every new document.</p>
+      </div>
+      <div class="scenario-col col-future">
+        <div class="col-header">With AI Integration</div>
+        <p>An agent <span class="highlight">trained on every RFP Zenith has ever submitted — in their voice, with their compliance language and track record — drafts 80% of it.</span> Andrew edits the 20% that matters.</p>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-label">
+        <div class="scenario-num">04</div>
+        <h3>Portfolio Intelligence</h3>
+      </div>
+      <div class="scenario-col col-today">
+        <div class="col-header">Today</div>
+        <p>Chelsea wants to know what happens if a client shifts allocation — requires manual analysis across YourStake, Morningstar, and RightCapital. Multiple tabs, multiple exports, manual comparison.</p>
+      </div>
+      <div class="scenario-col col-future">
+        <div class="col-header">With AI Integration</div>
+        <p>Chelsea asks: <span class="highlight">"What happens if the Morrison Foundation shifts 20% into climate solutions without dropping below a 7 on quantitative score?"</span> Gets a real answer — the agent knows the portfolio, the fund universe, the values, and the constraints.</p>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-label">
+        <div class="scenario-num">05</div>
+        <h3>New Hire Onboarding</h3>
+      </div>
+      <div class="scenario-col col-today">
+        <div class="col-header">Today</div>
+        <p>Nina starts. Months of learning how Zenith operates — processes, compliance requirements, client preferences scattered across Notion, Drive, and Slack. Institutional knowledge lives in people's heads.</p>
+      </div>
+      <div class="scenario-col col-future">
+        <div class="col-header">With AI Integration</div>
+        <p>Nina talks to <span class="highlight">an internal agent that knows every process, every compliance requirement, every client preference that's been documented.</span> Productive in days, not months.</p>
+      </div>
+    </div>
+
+    <div class="scenario">
+      <div class="scenario-label">
+        <div class="scenario-num">06</div>
+        <h3>Marketing &amp; Research</h3>
+      </div>
+      <div class="scenario-col col-today">
+        <div class="col-header">Today</div>
+        <p>Marketing uses Perplexity for research and Canva for design — separately. Content creation is manual, reactive, and disconnected from the firm's actual client data and investment themes.</p>
+      </div>
+      <div class="scenario-col col-future">
+        <div class="col-header">With AI Integration</div>
+        <p><span class="highlight">Weekly automated brief: what happened in ESG and impact investing this week that's relevant to Zenith's specific client base.</span> Draft social posts attached. Content grounded in real portfolio themes.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="principle">
+    <div class="principle-label">The Foundation</div>
+    <p>None of this requires new hires, new departments, or new expertise. It requires structured data and purpose-built tools — which is exactly what Phases I through III produce.</p>
+  </div>
+
+  <div class="footer">
+    <span>Confidential</span>
+    <span class="footer-center">Prepared by RUDI for Zenith Wealth Partners</span>
+    <span>March 2026</span>
+  </div>
+
+</div>
+</body>
+</html>
