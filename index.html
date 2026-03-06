@@ -545,16 +545,42 @@
     .actions { grid-template-columns: 1fr; }
     .dashboard-grid { grid-template-columns: 1fr 1fr; }
     .tools-grid { grid-template-columns: 1fr; }
+    .footer { flex-direction: column; gap: 8px; text-align: center; }
   }
 
   @media (max-width: 600px) {
-    .page { padding: 40px 24px; }
-    .hero h1 { font-size: 36px; }
-    .hero .deck { font-size: 19px; }
-    .dashboard-grid { grid-template-columns: 1fr; }
+    .page { padding: 32px 20px; }
+    .hero { margin-bottom: 40px; padding-top: 24px; }
+    .hero h1 { font-size: 32px; letter-spacing: -0.3px; }
+    .hero .deck { font-size: 18px; }
+    .hero .byline { font-size: 10px; letter-spacing: 1.5px; line-height: 1.6; }
+    .hero .byline span { display: none; }
+    .flow-section { padding: 24px 16px; margin-bottom: 40px; }
     .flow-phase { padding: 20px 16px; }
-    .action-card { padding: 28px 24px; }
-    .action-card h3 { font-size: 24px; }
+    .flow-phase h3 { font-size: 20px; }
+    .principle { padding: 24px 20px; margin-bottom: 40px; }
+    .principle p { font-size: 17px; }
+    .actions { margin-bottom: 40px; }
+    .action-card { padding: 28px 20px; }
+    .action-card h3 { font-size: 22px; }
+    .action-card p { font-size: 13px; }
+    .cta { display: block; text-align: center; padding: 16px 24px; font-size: 11px; }
+    .action-card.locked .cta-locked { display: block; text-align: center; padding: 16px 24px; font-size: 11px; }
+    .dashboard-grid { grid-template-columns: 1fr; }
+    .dash-metric { padding: 20px 16px; }
+    .dash-metric .metric-value { font-size: 28px; }
+    .tool-card { padding: 24px 20px; }
+    .tool-card h4 { font-size: 20px; }
+    .section-label { font-size: 9px; margin-bottom: 20px; }
+    .masthead-left, .masthead-right { font-size: 9px; }
+  }
+
+  @media (max-width: 380px) {
+    .page { padding: 24px 16px; }
+    .hero h1 { font-size: 28px; }
+    .hero .deck { font-size: 16px; }
+    .deliverables { gap: 4px; }
+    .deliverable { font-size: 10px; padding: 4px 8px; }
   }
 
   /* ——— Print ——— */
